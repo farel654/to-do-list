@@ -1,0 +1,103 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    background-color:  rgba(16, 25, 65, 0.897);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#hd {
+    font-size: 18px;
+    color: rgb(255, 246, 240);
+    text-align: center;
+}
+
+#all {
+    width: 70%;
+    height: 50%;
+    background-color: rgba(16, 25, 65, 0.897);
+    margin: 5%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    box-shadow: 0px 10px 30px rgba(16, 25, 65, 0.897);
+    border-radius: 6px;
+}
+
+#add button {
+    background-color: orange;
+    font-size: 12px;
+    width: 40px;
+    height: 25px;
+    padding: 3px;
+    border-radius: 3px;
+    color: aliceblue;
+}
+
+input[type="text"] {
+    width: 70%;
+    height: 20px;
+    font-size: 12px;
+    margin: 3px;
+    padding: 3px;
+    border-radius: 3px;
+    background-color:  rgba(16, 25, 65, 0.897);
+    border-radius: 3px;
+    color: #fff;
+}
+
+input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+    accent-color: green;
+}
+
+.show {
+    margin-bottom: 5px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #fff;
+    position: relative;
+}
+
+.show button {
+    background-color: red;
+    font-size: 12px;
+    width: 44px;
+    height: 24px;
+    padding: 3px;
+    color: aliceblue;
+}
+
+.throught {
+    text-decoration: line-through;
+    color: #f0f0f075;
+}
+
+li {
+    list-style-type: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#end {
+    background-color: green;
+}
+
+input::placeholder {
+    font-size: 12px;
+}
+
+button {
+    margin: 6px;
+}
+
+#add {
+    margin: 23px;
+}

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Ma To-Do List</title>
+</head>
+<body>
+    <div id="all">
+        <div id="hd">
+            <p>To-Do List</p>
+        </div>
+        <div id="add">
+            <form method="post" action="{% url 'add' %}">
+                {% csrf_token %}
+                <input type="text" name="title" placeholder="Please Enter a New task">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    <div class="show">
+                        <form method="post" action="{%url 'action' task.id %}">
+                            {% csrf_token %}
+                            {% if task.finish %}
+                                <input type="checkbox" id="{{task.id}}" name="task.finish" checked disabled>
+                                <label for="{{task.id}}" class="throught">{{task.name_task}}</label>
+                            {% else %}
+                                <input type="checkbox" id="{{task.id}}" name="task.finish">
+                                <label for="{{task.id}}">{{task.name_task}}</label>
+                            {% endif %}
+                            <button type="submit" name="action" value="delete">Delete</button>
+                            <button type="submit" name="action" value="end" id="end">Finish</button>
+                        </form>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
